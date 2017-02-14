@@ -251,6 +251,11 @@ public class c_widrawal extends javax.swing.JFrame {
 
         bc.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
         bc.setText("Cancel");
+        bc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bcActionPerformed(evt);
+            }
+        });
         getContentPane().add(bc);
         bc.setBounds(80, 370, 60, 50);
 
@@ -352,8 +357,8 @@ public class c_widrawal extends javax.swing.JFrame {
     }//GEN-LAST:event_b7ActionPerformed
 
     private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
-        in += "8";
-        tf1.setText(in);
+    in += "8";
+    tf1.setText(in);
     }//GEN-LAST:event_b8ActionPerformed
 
     private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
@@ -376,12 +381,19 @@ public class c_widrawal extends javax.swing.JFrame {
                     "Transaction Failed",0);
         else {
                 mo = mo-t; 
+                new balance().mo = this.mo;
                 JOptionPane.showMessageDialog(null, "Balance Amount: Rp."+mo);
                 if(mo<=100000)
                     JOptionPane.showMessageDialog(null, "Minimum Balance Amount must be Rp1.500.000,00"+
                             "Do deposit soon to avoid account closure","CAUTION",2);
             }
     }//GEN-LAST:event_bokActionPerformed
+
+    private void bcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bcActionPerformed
+         home hm = new home();
+            dispose();
+            hm.setVisible(true);
+    }//GEN-LAST:event_bcActionPerformed
 
     /**
      * @param args the command line arguments

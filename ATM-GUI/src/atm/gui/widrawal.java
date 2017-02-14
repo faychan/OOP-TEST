@@ -12,7 +12,8 @@ import javax.swing.JOptionPane;
  * @author Faychan
  */
 public class widrawal extends javax.swing.JFrame {
-   int mo = 1239400; int saldo;
+   int mo = new balance().mo;
+   int saldo;
 
     /**
      * Creates new form widrawal
@@ -41,6 +42,10 @@ public class widrawal extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         b7 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
+        b4 = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        b8 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -88,12 +93,12 @@ public class widrawal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(b6);
-        b6.setBounds(130, 200, 60, 30);
+        b6.setBounds(100, 300, 60, 30);
 
         jLabel5.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
         jLabel5.setText("Other Amounts");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(210, 200, 110, 30);
+        jLabel5.setBounds(180, 300, 110, 30);
 
         jLabel6.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
         jLabel6.setText("Rp200.000");
@@ -106,7 +111,7 @@ public class widrawal extends javax.swing.JFrame {
         jLabel7.setBounds(90, 80, 110, 30);
 
         jLabel8.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
-        jLabel8.setText("Rp500.000");
+        jLabel8.setText("Rp300.000");
         getContentPane().add(jLabel8);
         jLabel8.setBounds(290, 150, 70, 30);
 
@@ -125,7 +130,37 @@ public class widrawal extends javax.swing.JFrame {
         getContentPane().add(jLabel9);
         jLabel9.setBounds(90, 140, 100, 30);
 
-        setSize(new java.awt.Dimension(472, 297));
+        b4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        b4.setText(">");
+        b4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(b4);
+        b4.setBounds(360, 210, 60, 30);
+
+        jLabel10.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
+        jLabel10.setText("Rp500.000");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(290, 210, 70, 30);
+
+        jLabel11.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
+        jLabel11.setText("Rp2.500.000");
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(90, 200, 100, 30);
+
+        b8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        b8.setText("<");
+        b8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b8ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(b8);
+        b8.setBounds(10, 200, 60, 30);
+
+        setSize(new java.awt.Dimension(483, 441));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -142,7 +177,8 @@ public class widrawal extends javax.swing.JFrame {
                     "Minimum Widrawal is Rp100.000",
                     "Transaction Failed",0);
         else {
-                mo-=t; 
+                mo-=t;
+                new balance().mo = this.mo;
                 JOptionPane.showMessageDialog(null, "Balance Amount: Rp."+mo);
                 if(mo<=100000)
                     JOptionPane.showMessageDialog(null, "Minimum Balance Amount must be Rp. 50.000,00"+
@@ -151,7 +187,7 @@ public class widrawal extends javax.swing.JFrame {
     }//GEN-LAST:event_b2ActionPerformed
 
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
-        int t = 500000;
+        int t = 300000;
         
         if(t>mo)
                 JOptionPane.showMessageDialog(null, 
@@ -163,10 +199,11 @@ public class widrawal extends javax.swing.JFrame {
                     "Minimum Widrawal is Rp100.000",
                     "Transaction Failed",0);
         else {
-                mo-=t; 
+                mo-=t;
+                new balance().mo = this.mo;
                 JOptionPane.showMessageDialog(null, "Balance Amount: Rp."+mo);
                 if(mo<=100000)
-                    JOptionPane.showMessageDialog(null, "Minimum Balance Amount must be Rp500.000,00"+
+                    JOptionPane.showMessageDialog(null, "Minimum Balance Amount must be Rp100.000,00"+
                             "Do deposit soon to avoid account closure","CAUTION",2);
             }
     }//GEN-LAST:event_b3ActionPerformed
@@ -185,9 +222,10 @@ public class widrawal extends javax.swing.JFrame {
                     "Transaction Failed",0);
         else {
                 mo-=t; 
+                new balance().mo = this.mo;
                 JOptionPane.showMessageDialog(null, "Balance Amount: Rp."+mo);
                 if(mo<=100000)
-                    JOptionPane.showMessageDialog(null, "Minimum Balance Amount must be Rp1.000.000,00"+
+                    JOptionPane.showMessageDialog(null, "Minimum Balance Amount must be Rp100.000,00"+
                             "Do deposit soon to avoid account closure","CAUTION",2);
             }
     }//GEN-LAST:event_b5ActionPerformed
@@ -206,6 +244,7 @@ public class widrawal extends javax.swing.JFrame {
                     "Transaction Failed",0);
         else {
                 mo-=t; 
+                new balance().mo = this.mo;
                 JOptionPane.showMessageDialog(null, "Balance Amount: Rp."+mo);
                 if(mo<=100000)
                     JOptionPane.showMessageDialog(null, "Minimum Balance Amount must be Rp1.500.000,00"+
@@ -218,6 +257,50 @@ public class widrawal extends javax.swing.JFrame {
             dispose();
         fer.setVisible(true);
     }//GEN-LAST:event_b6ActionPerformed
+
+    private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
+         int t = 500000;
+        
+        if(t>mo)
+                JOptionPane.showMessageDialog(null, 
+                    "Balance amount is not enough\n"
+                            + "please deposit",
+                    "Transaction Failed",0);
+        else if(t<100000)
+                JOptionPane.showMessageDialog(null, 
+                    "Minimum Widrawal is Rp100.000",
+                    "Transaction Failed",0);
+        else {
+                mo-=t; 
+                new balance().mo = this.mo;
+                JOptionPane.showMessageDialog(null, "Balance Amount: Rp."+mo);
+                if(mo<=100000)
+                    JOptionPane.showMessageDialog(null, "Minimum Balance Amount must be Rp100.000,00"+
+                            "Do deposit soon to avoid account closure","CAUTION",2);
+            }
+    }//GEN-LAST:event_b4ActionPerformed
+
+    private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
+         int t = 2500000;
+        
+        if(t>mo)
+                JOptionPane.showMessageDialog(null, 
+                    "Balance amount is not enough\n"
+                            + "please deposit",
+                    "Transaction Failed",0);
+        else if(t<100000)
+                JOptionPane.showMessageDialog(null, 
+                    "Minimum Widrawal is Rp100.000",
+                    "Transaction Failed",0);
+        else {
+                mo-=t; 
+                new balance().mo = this.mo;
+                JOptionPane.showMessageDialog(null, "Balance Amount: Rp."+mo);
+                if(mo<=100000)
+                    JOptionPane.showMessageDialog(null, "Minimum Balance Amount must be Rp100.000,00"+
+                            "Do deposit soon to avoid account closure","CAUTION",2);
+            }
+    }//GEN-LAST:event_b8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -259,9 +342,13 @@ public class widrawal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton b2;
     private javax.swing.JButton b3;
+    private javax.swing.JButton b4;
     private javax.swing.JButton b5;
     private javax.swing.JButton b6;
     private javax.swing.JButton b7;
+    private javax.swing.JButton b8;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

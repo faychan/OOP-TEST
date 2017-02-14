@@ -5,6 +5,8 @@
  */
 package atm.gui;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Faychan
@@ -174,7 +176,7 @@ public class home extends javax.swing.JFrame {
     }//GEN-LAST:event_b6ActionPerformed
 
     private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
-        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null,"How to utilize\n[1] Input the right PIN\n[2] Do transaction correctly as your choice\n[3] Spend money wisely\n ","INFO",1);
     }//GEN-LAST:event_b7ActionPerformed
 
     /**

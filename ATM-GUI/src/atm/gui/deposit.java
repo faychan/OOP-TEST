@@ -5,14 +5,18 @@
  */
 package atm.gui;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Faychan
  */
 public class deposit extends javax.swing.JFrame {
-        int mo = new balance().mo;
+   public int mo = new balance().mo;
+ int saldo;
+
     /**
-     * Creates new form deposit
+     * Creates new form widrawal
      */
     public deposit() {
         initComponents();
@@ -28,20 +32,22 @@ public class deposit extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jSeparator2 = new javax.swing.JSeparator();
-        jButton5 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
-        jButton21 = new javax.swing.JButton();
-        jButton22 = new javax.swing.JButton();
-        jButton23 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
-        jButton25 = new javax.swing.JButton();
+        b2 = new javax.swing.JButton();
+        b3 = new javax.swing.JButton();
+        b5 = new javax.swing.JButton();
+        b6 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        b7 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        b4 = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        b8 = new javax.swing.JButton();
+        b9 = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -49,164 +55,237 @@ public class deposit extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Soria", 1, 18)); // NOI18N
         jLabel3.setText("CASH DEPOSITO");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(100, 20, 150, 60);
+        jLabel3.setBounds(160, 0, 150, 60);
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        b2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        b2.setText(">");
+        b2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                b2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(90, 80, 170, 40);
-        getContentPane().add(jSeparator2);
-        jSeparator2.setBounds(0, 150, 360, 10);
+        getContentPane().add(b2);
+        b2.setBounds(361, 80, 60, 30);
 
-        jButton5.setText("9");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        b3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        b3.setText(">");
+        b3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                b3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5);
-        jButton5.setBounds(150, 370, 60, 50);
+        getContentPane().add(b3);
+        b3.setBounds(360, 150, 60, 30);
 
-        jButton15.setText("2");
-        jButton15.addActionListener(new java.awt.event.ActionListener() {
+        b5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        b5.setText("<");
+        b5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15ActionPerformed(evt);
+                b5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton15);
-        jButton15.setBounds(150, 190, 60, 50);
+        getContentPane().add(b5);
+        b5.setBounds(10, 80, 60, 30);
 
-        jButton16.setText("1");
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
+        b6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        b6.setText(">");
+        b6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
+                b6ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton16);
-        jButton16.setBounds(80, 190, 60, 50);
+        getContentPane().add(b6);
+        b6.setBounds(370, 270, 60, 30);
 
-        jButton17.setText("3");
-        jButton17.addActionListener(new java.awt.event.ActionListener() {
+        jLabel5.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
+        jLabel5.setText("Go Back");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(80, 260, 110, 30);
+
+        jLabel6.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
+        jLabel6.setText("Rp200.000");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(290, 80, 70, 30);
+
+        jLabel7.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
+        jLabel7.setText("Rp1.000.0000");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(90, 80, 110, 30);
+
+        jLabel8.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
+        jLabel8.setText("Rp300.000");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(290, 150, 70, 30);
+
+        b7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        b7.setText("<");
+        b7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton17ActionPerformed(evt);
+                b7ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton17);
-        jButton17.setBounds(220, 190, 60, 50);
+        getContentPane().add(b7);
+        b7.setBounds(10, 140, 60, 30);
 
-        jButton18.setText("4");
-        jButton18.addActionListener(new java.awt.event.ActionListener() {
+        jLabel9.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
+        jLabel9.setText("Rp1.500.000");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(90, 140, 100, 30);
+
+        b4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        b4.setText(">");
+        b4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton18ActionPerformed(evt);
+                b4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton18);
-        jButton18.setBounds(80, 250, 60, 50);
+        getContentPane().add(b4);
+        b4.setBounds(360, 210, 60, 30);
 
-        jButton19.setText("5");
-        jButton19.addActionListener(new java.awt.event.ActionListener() {
+        jLabel10.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
+        jLabel10.setText("Rp500.000");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(290, 210, 70, 30);
+
+        jLabel11.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
+        jLabel11.setText("Rp2.500.000");
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(90, 200, 100, 30);
+
+        b8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        b8.setText("<");
+        b8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton19ActionPerformed(evt);
+                b8ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton19);
-        jButton19.setBounds(150, 250, 60, 50);
+        getContentPane().add(b8);
+        b8.setBounds(10, 200, 60, 30);
 
-        jButton20.setText("6");
-        jButton20.addActionListener(new java.awt.event.ActionListener() {
+        b9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        b9.setText("<");
+        b9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton20ActionPerformed(evt);
+                b9ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton20);
-        jButton20.setBounds(220, 250, 60, 50);
+        getContentPane().add(b9);
+        b9.setBounds(10, 260, 60, 30);
 
-        jButton21.setText("7");
-        jButton21.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton21ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton21);
-        jButton21.setBounds(80, 310, 60, 50);
+        jLabel12.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
+        jLabel12.setText("Other Amounts");
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(280, 270, 110, 30);
 
-        jButton22.setText("8");
-        jButton22.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton22ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton22);
-        jButton22.setBounds(150, 310, 60, 50);
-
-        jButton23.setText("OK");
-        getContentPane().add(jButton23);
-        jButton23.setBounds(220, 370, 60, 50);
-
-        jButton24.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
-        jButton24.setText("Cancel");
-        getContentPane().add(jButton24);
-        jButton24.setBounds(80, 370, 60, 50);
-
-        jButton25.setText("9");
-        jButton25.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton25ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton25);
-        jButton25.setBounds(220, 310, 60, 50);
-
-        setSize(new java.awt.Dimension(377, 505));
+        setSize(new java.awt.Dimension(483, 441));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
+        int t = 200000;
+        
+        if(t>mo)
+                JOptionPane.showMessageDialog(null, 
+                    "Balance amount is not enough\n"
+                            + "please deposit",
+                    "Transaction Failed",0);
+        else if(t<100000)
+                JOptionPane.showMessageDialog(null, 
+                    "Minimum Widrawal is Rp100.000",
+                    "Transaction Failed",0);
+        else {
+                mo+=t; 
+                JOptionPane.showMessageDialog(null, "Balance Amount: Rp."+mo);
+            }
+    }//GEN-LAST:event_b2ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
+        int t = 300000;
+        
+        if (t%100!=0)
+            JOptionPane.showMessageDialog(null,
+                    "IB Frankurt ATM doesn't include coin feature",
+                    "Transaction Failed",0);
+        else if(t<100000)
+            JOptionPane.showMessageDialog(null, 
+                    "Value Minimum for deposit is Rp100000,00",
+                    "ERROR", 0);
+        else if(t>=100000)
+            mo += t;
+            new balance().mo = this.mo;
+            JOptionPane.showMessageDialog(null, 
+                    "Your balance amount is: Rp"+mo);
+    }//GEN-LAST:event_b3ActionPerformed
 
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton15ActionPerformed
+    private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
+        int t = 1000000;
+        
+        if (t%100!=0)
+            JOptionPane.showMessageDialog(null,
+                    "IB Frankurt ATM doesn't include coin feature",
+                    "Transaction Failed",0);
+        else if(t<100000)
+            JOptionPane.showMessageDialog(null, 
+                    "Value Minimum for deposit is Rp100000,00",
+                    "ERROR", 0);
+        else if(t>=100000)
+            mo += t;
+            new balance().mo = this.mo;
+            JOptionPane.showMessageDialog(null, 
+                    "Your balance amount is: Rp"+mo);
+    }//GEN-LAST:event_b5ActionPerformed
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton16ActionPerformed
+    private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
+        int t = 1500000;
+        
+        if (t%100!=0)
+            JOptionPane.showMessageDialog(null,
+                    "IB Frankurt ATM doesn't include coin feature",
+                    "Transaction Failed",0);
+        else if(t<100000)
+            JOptionPane.showMessageDialog(null, 
+                    "Value Minimum for deposit is Rp100000,00",
+                    "ERROR", 0);
+        else if(t>=100000)
+            mo += t;
+            new balance().mo = this.mo;
+            JOptionPane.showMessageDialog(null, 
+                    "Your balance amount is: Rp"+mo);
+    }//GEN-LAST:event_b7ActionPerformed
 
-    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton17ActionPerformed
+    private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
+        cdeposit fer = new cdeposit();
+            dispose();
+        fer.setVisible(true);
+    }//GEN-LAST:event_b6ActionPerformed
 
-    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+    private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton18ActionPerformed
+    }//GEN-LAST:event_b4ActionPerformed
 
-    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton19ActionPerformed
+    private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
+         int t = 2500000;
+        
+        if (t%100!=0)
+            JOptionPane.showMessageDialog(null,
+                    "IB Frankurt ATM doesn't include coin feature",
+                    "Transaction Failed",0);
+        else if(t<100000)
+            JOptionPane.showMessageDialog(null, 
+                    "Value Minimum for deposit is Rp100000,00",
+                    "ERROR", 0);
+        else if(t>=100000)
+            mo += t;
+            new balance().mo = this.mo;
+            JOptionPane.showMessageDialog(null, 
+                    "Your balance amount is: Rp"+mo);
+    }//GEN-LAST:event_b8ActionPerformed
 
-    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton20ActionPerformed
-
-    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton21ActionPerformed
-
-    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton22ActionPerformed
-
-    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton25ActionPerformed
+    private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
+        home fer = new home();
+            dispose();
+        fer.setVisible(true);
+    }//GEN-LAST:event_b9ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -234,6 +313,7 @@ public class deposit extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(deposit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -242,22 +322,26 @@ public class deposit extends javax.swing.JFrame {
             }
         });
     }
+    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton23;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton b2;
+    private javax.swing.JButton b3;
+    private javax.swing.JButton b4;
+    private javax.swing.JButton b5;
+    private javax.swing.JButton b6;
+    private javax.swing.JButton b7;
+    private javax.swing.JButton b8;
+    private javax.swing.JButton b9;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 }
