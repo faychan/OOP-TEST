@@ -62,16 +62,31 @@ public class widrawal extends javax.swing.JFrame {
 
         b3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         b3.setText(">");
+        b3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(b3);
         b3.setBounds(360, 150, 60, 30);
 
         b5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         b5.setText("<");
+        b5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b5ActionPerformed(evt);
+            }
+        });
         getContentPane().add(b5);
         b5.setBounds(10, 80, 60, 30);
 
         b6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         b6.setText("<");
+        b6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b6ActionPerformed(evt);
+            }
+        });
         getContentPane().add(b6);
         b6.setBounds(130, 200, 60, 30);
 
@@ -97,6 +112,11 @@ public class widrawal extends javax.swing.JFrame {
 
         b7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         b7.setText("<");
+        b7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b7ActionPerformed(evt);
+            }
+        });
         getContentPane().add(b7);
         b7.setBounds(10, 140, 60, 30);
 
@@ -122,13 +142,82 @@ public class widrawal extends javax.swing.JFrame {
                     "Minimum Widrawal is Rp100.000",
                     "Transaction Failed",0);
         else {
-                saldo = mo-t; 
-                JOptionPane.showMessageDialog(null, "Balance Amount: Rp."+saldo);
+                mo-=t; 
+                JOptionPane.showMessageDialog(null, "Balance Amount: Rp."+mo);
                 if(mo<=100000)
                     JOptionPane.showMessageDialog(null, "Minimum Balance Amount must be Rp. 50.000,00"+
                             "Do deposit soon to avoid account closure","CAUTION",2);
             }
     }//GEN-LAST:event_b2ActionPerformed
+
+    private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
+        int t = 500000;
+        
+        if(t>mo)
+                JOptionPane.showMessageDialog(null, 
+                    "Balance amount is not enough\n"
+                            + "please deposit",
+                    "Transaction Failed",0);
+        else if(t<100000)
+                JOptionPane.showMessageDialog(null, 
+                    "Minimum Widrawal is Rp100.000",
+                    "Transaction Failed",0);
+        else {
+                mo-=t; 
+                JOptionPane.showMessageDialog(null, "Balance Amount: Rp."+mo);
+                if(mo<=100000)
+                    JOptionPane.showMessageDialog(null, "Minimum Balance Amount must be Rp500.000,00"+
+                            "Do deposit soon to avoid account closure","CAUTION",2);
+            }
+    }//GEN-LAST:event_b3ActionPerformed
+
+    private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
+        int t = 1000000;
+        
+        if(t>mo)
+                JOptionPane.showMessageDialog(null, 
+                    "Balance amount is not enough\n"
+                            + "please deposit",
+                    "Transaction Failed",0);
+        else if(t<100000)
+                JOptionPane.showMessageDialog(null, 
+                    "Minimum Widrawal is Rp100.000",
+                    "Transaction Failed",0);
+        else {
+                mo-=t; 
+                JOptionPane.showMessageDialog(null, "Balance Amount: Rp."+mo);
+                if(mo<=100000)
+                    JOptionPane.showMessageDialog(null, "Minimum Balance Amount must be Rp1.000.000,00"+
+                            "Do deposit soon to avoid account closure","CAUTION",2);
+            }
+    }//GEN-LAST:event_b5ActionPerformed
+
+    private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
+        int t = 1500000;
+        
+        if(t>mo)
+                JOptionPane.showMessageDialog(null, 
+                    "Balance amount is not enough\n"
+                            + "please deposit",
+                    "Transaction Failed",0);
+        else if(t<100000)
+                JOptionPane.showMessageDialog(null, 
+                    "Minimum Widrawal is Rp100.000",
+                    "Transaction Failed",0);
+        else {
+                mo-=t; 
+                JOptionPane.showMessageDialog(null, "Balance Amount: Rp."+mo);
+                if(mo<=100000)
+                    JOptionPane.showMessageDialog(null, "Minimum Balance Amount must be Rp1.500.000,00"+
+                            "Do deposit soon to avoid account closure","CAUTION",2);
+            }
+    }//GEN-LAST:event_b7ActionPerformed
+
+    private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
+        c_widrawal fer = new c_widrawal();
+            dispose();
+        fer.setVisible(true);
+    }//GEN-LAST:event_b6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,12 +253,7 @@ public class widrawal extends javax.swing.JFrame {
             }
         });
     }
-    public void ambil (int tab, int t){
-        
-    }
-    public int getsaldo(){
-        return saldo;
-    }
+    
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

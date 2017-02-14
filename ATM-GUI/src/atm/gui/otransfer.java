@@ -10,7 +10,7 @@ package atm.gui;
  * @author Faychan
  */
 public class otransfer extends javax.swing.JFrame {
-
+    int mo = new balance().mo;
     /**
      * Creates new form otransfer
      */
@@ -210,7 +210,7 @@ public class otransfer extends javax.swing.JFrame {
             tf8.setText("Dokter Gigi");
             tf9.setText(" Sore (16.00-22.00)");
     }//GEN-LAST:event_jComboBox1ActionPerformed
-
+    }
     private void tf1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tf1ActionPerformed

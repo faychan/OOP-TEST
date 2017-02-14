@@ -10,6 +10,7 @@ package atm.gui;
  * @author Faychan
  */
 public class ATMGUI {
+    public int mo = 123;
 
     /**
      * @param args the command line arguments

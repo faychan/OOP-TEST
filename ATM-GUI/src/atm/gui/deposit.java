@@ -10,7 +10,7 @@ package atm.gui;
  * @author Faychan
  */
 public class deposit extends javax.swing.JFrame {
-        int mo = 1239400;
+        int mo = new balance().mo;
     /**
      * Creates new form deposit
      */

@@ -5,16 +5,20 @@
  */
 package atm.gui;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Faychan
  */
 public class c_widrawal extends javax.swing.JFrame {
-    int mo = 1239400;
+    int mo = new balance().mo;
+    String in;
     /**
      * Creates new form c_widrawal
      */
     public c_widrawal() {
+        this.in = "";
         initComponents();
     }
 
@@ -42,20 +46,20 @@ public class c_widrawal extends javax.swing.JFrame {
         jButton14 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        tf1 = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
-        jButton5 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
-        jButton21 = new javax.swing.JButton();
-        jButton22 = new javax.swing.JButton();
-        jButton23 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
-        jButton25 = new javax.swing.JButton();
+        b0 = new javax.swing.JButton();
+        b2 = new javax.swing.JButton();
+        b1 = new javax.swing.JButton();
+        b3 = new javax.swing.JButton();
+        b4 = new javax.swing.JButton();
+        b5 = new javax.swing.JButton();
+        b6 = new javax.swing.JButton();
+        b7 = new javax.swing.JButton();
+        b8 = new javax.swing.JButton();
+        bok = new javax.swing.JButton();
+        bc = new javax.swing.JButton();
+        b9 = new javax.swing.JButton();
 
         jButton2.setText("9");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -145,122 +149,127 @@ public class c_widrawal extends javax.swing.JFrame {
         getContentPane().add(jLabel4);
         jLabel4.setBounds(140, 30, 150, 60);
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        tf1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                tf1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(90, 100, 170, 40);
+        getContentPane().add(tf1);
+        tf1.setBounds(90, 100, 170, 40);
         getContentPane().add(jSeparator2);
         jSeparator2.setBounds(0, 170, 360, 10);
 
-        jButton5.setText("9");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        b0.setText("0");
+        b0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                b0ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5);
-        jButton5.setBounds(150, 370, 60, 50);
+        getContentPane().add(b0);
+        b0.setBounds(150, 370, 60, 50);
 
-        jButton15.setText("2");
-        jButton15.addActionListener(new java.awt.event.ActionListener() {
+        b2.setText("2");
+        b2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15ActionPerformed(evt);
+                b2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton15);
-        jButton15.setBounds(150, 190, 60, 50);
+        getContentPane().add(b2);
+        b2.setBounds(150, 190, 60, 50);
 
-        jButton16.setText("1");
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
+        b1.setText("1");
+        b1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
+                b1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton16);
-        jButton16.setBounds(80, 190, 60, 50);
+        getContentPane().add(b1);
+        b1.setBounds(80, 190, 60, 50);
 
-        jButton17.setText("3");
-        jButton17.addActionListener(new java.awt.event.ActionListener() {
+        b3.setText("3");
+        b3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton17ActionPerformed(evt);
+                b3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton17);
-        jButton17.setBounds(220, 190, 60, 50);
+        getContentPane().add(b3);
+        b3.setBounds(220, 190, 60, 50);
 
-        jButton18.setText("4");
-        jButton18.addActionListener(new java.awt.event.ActionListener() {
+        b4.setText("4");
+        b4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton18ActionPerformed(evt);
+                b4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton18);
-        jButton18.setBounds(80, 250, 60, 50);
+        getContentPane().add(b4);
+        b4.setBounds(80, 250, 60, 50);
 
-        jButton19.setText("5");
-        jButton19.addActionListener(new java.awt.event.ActionListener() {
+        b5.setText("5");
+        b5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton19ActionPerformed(evt);
+                b5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton19);
-        jButton19.setBounds(150, 250, 60, 50);
+        getContentPane().add(b5);
+        b5.setBounds(150, 250, 60, 50);
 
-        jButton20.setText("6");
-        jButton20.addActionListener(new java.awt.event.ActionListener() {
+        b6.setText("6");
+        b6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton20ActionPerformed(evt);
+                b6ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton20);
-        jButton20.setBounds(220, 250, 60, 50);
+        getContentPane().add(b6);
+        b6.setBounds(220, 250, 60, 50);
 
-        jButton21.setText("7");
-        jButton21.addActionListener(new java.awt.event.ActionListener() {
+        b7.setText("7");
+        b7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton21ActionPerformed(evt);
+                b7ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton21);
-        jButton21.setBounds(80, 310, 60, 50);
+        getContentPane().add(b7);
+        b7.setBounds(80, 310, 60, 50);
 
-        jButton22.setText("8");
-        jButton22.addActionListener(new java.awt.event.ActionListener() {
+        b8.setText("8");
+        b8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton22ActionPerformed(evt);
+                b8ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton22);
-        jButton22.setBounds(150, 310, 60, 50);
+        getContentPane().add(b8);
+        b8.setBounds(150, 310, 60, 50);
 
-        jButton23.setText("OK");
-        getContentPane().add(jButton23);
-        jButton23.setBounds(220, 370, 60, 50);
-
-        jButton24.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
-        jButton24.setText("Cancel");
-        getContentPane().add(jButton24);
-        jButton24.setBounds(80, 370, 60, 50);
-
-        jButton25.setText("9");
-        jButton25.addActionListener(new java.awt.event.ActionListener() {
+        bok.setText("OK");
+        bok.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton25ActionPerformed(evt);
+                bokActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton25);
-        jButton25.setBounds(220, 310, 60, 50);
+        getContentPane().add(bok);
+        bok.setBounds(220, 370, 60, 50);
+
+        bc.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
+        bc.setText("Cancel");
+        getContentPane().add(bc);
+        bc.setBounds(80, 370, 60, 50);
+
+        b9.setText("9");
+        b9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b9ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(b9);
+        b9.setBounds(220, 310, 60, 50);
 
         setSize(new java.awt.Dimension(376, 498));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void tf1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_tf1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -302,45 +311,77 @@ public class c_widrawal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton14ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void b0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b0ActionPerformed
+         in += "0";
+        tf1.setText(in);
+    }//GEN-LAST:event_b0ActionPerformed
 
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton15ActionPerformed
+    private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
+       in += "2";
+        tf1.setText(in);
+    }//GEN-LAST:event_b2ActionPerformed
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton16ActionPerformed
+    private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
+        in += "1";
+        tf1.setText(in);
+    }//GEN-LAST:event_b1ActionPerformed
 
-    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton17ActionPerformed
+    private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
+        in += "3";
+        tf1.setText(in);
+    }//GEN-LAST:event_b3ActionPerformed
 
-    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton18ActionPerformed
+    private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
+        in += "4";
+        tf1.setText(in);
+    }//GEN-LAST:event_b4ActionPerformed
 
-    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton19ActionPerformed
+    private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
+        in += "5";
+        tf1.setText(in);
+    }//GEN-LAST:event_b5ActionPerformed
 
-    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton20ActionPerformed
+    private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
+        in += "6";
+        tf1.setText(in);
+    }//GEN-LAST:event_b6ActionPerformed
 
-    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton21ActionPerformed
+    private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
+        in += "7";
+        tf1.setText(in);
+    }//GEN-LAST:event_b7ActionPerformed
 
-    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton22ActionPerformed
+    private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
+        in += "8";
+        tf1.setText(in);
+    }//GEN-LAST:event_b8ActionPerformed
 
-    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton25ActionPerformed
+    private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
+        in += "9";
+        tf1.setText(in);
+    }//GEN-LAST:event_b9ActionPerformed
+
+    private void bokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bokActionPerformed
+        int t;
+        t = Integer.parseInt(tf1.getText());
+        
+        if(t>mo)
+                JOptionPane.showMessageDialog(null, 
+                    "Balance amount is not enough\n"
+                            + "please deposit",
+                    "Transaction Failed",0);
+        else if(t<100000)
+                JOptionPane.showMessageDialog(null, 
+                    "Minimum Widrawal is Rp100.000",
+                    "Transaction Failed",0);
+        else {
+                mo = mo-t; 
+                JOptionPane.showMessageDialog(null, "Balance Amount: Rp."+mo);
+                if(mo<=100000)
+                    JOptionPane.showMessageDialog(null, "Minimum Balance Amount must be Rp1.500.000,00"+
+                            "Do deposit soon to avoid account closure","CAUTION",2);
+            }
+    }//GEN-LAST:event_bokActionPerformed
 
     /**
      * @param args the command line arguments
@@ -378,26 +419,26 @@ public class c_widrawal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton b0;
+    private javax.swing.JButton b1;
+    private javax.swing.JButton b2;
+    private javax.swing.JButton b3;
+    private javax.swing.JButton b4;
+    private javax.swing.JButton b5;
+    private javax.swing.JButton b6;
+    private javax.swing.JButton b7;
+    private javax.swing.JButton b8;
+    private javax.swing.JButton b9;
+    private javax.swing.JButton bc;
+    private javax.swing.JButton bok;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton23;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
@@ -406,6 +447,6 @@ public class c_widrawal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField tf1;
     // End of variables declaration//GEN-END:variables
 }

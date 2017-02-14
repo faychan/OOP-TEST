@@ -16,6 +16,7 @@ public class balance extends javax.swing.JFrame {
      */
     public balance() {
         initComponents();
+        l1.setText("Rp"+mo);
     }
 
     /**
@@ -27,7 +28,7 @@ public class balance extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel3 = new javax.swing.JLabel();
+        l1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         b5 = new javax.swing.JButton();
@@ -35,9 +36,10 @@ public class balance extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jLabel3.setFont(new java.awt.Font("Nirmala UI", 1, 24)); // NOI18N
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(80, 90, 330, 80);
+        l1.setFont(new java.awt.Font("Nirmala UI", 1, 24)); // NOI18N
+        l1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(l1);
+        l1.setBounds(0, 90, 460, 80);
 
         jLabel4.setFont(new java.awt.Font("Soria", 0, 14)); // NOI18N
         jLabel4.setText("Other transaction");
@@ -50,12 +52,22 @@ public class balance extends javax.swing.JFrame {
         jLabel5.setBounds(130, 10, 240, 60);
 
         b5.setText("<");
+        b5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b5ActionPerformed(evt);
+            }
+        });
         getContentPane().add(b5);
         b5.setBounds(60, 230, 40, 30);
 
         setSize(new java.awt.Dimension(471, 338));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
+        new home().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_b5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -94,8 +106,8 @@ public class balance extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton b5;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel l1;
     // End of variables declaration//GEN-END:variables
 }
