@@ -260,7 +260,21 @@ public class deposit extends javax.swing.JFrame {
     }//GEN-LAST:event_b6ActionPerformed
 
     private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
-        // TODO add your handling code here:
+        int t = 500000;
+        
+        if (t%100!=0)
+            JOptionPane.showMessageDialog(null,
+                    "IB Frankurt ATM doesn't include coin feature",
+                    "Transaction Failed",0);
+        else if(t<100000)
+            JOptionPane.showMessageDialog(null, 
+                    "Value Minimum for deposit is Rp100000,00",
+                    "ERROR", 0);
+        else if(t>=100000)
+            mo += t;
+            new balance().mo = this.mo;
+            JOptionPane.showMessageDialog(null, 
+                    "Your balance amount is: Rp"+mo);
     }//GEN-LAST:event_b4ActionPerformed
 
     private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed

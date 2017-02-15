@@ -384,7 +384,7 @@ public class c_widrawal extends javax.swing.JFrame {
                 new balance().mo = this.mo;
                 JOptionPane.showMessageDialog(null, "Balance Amount: Rp."+mo);
                 if(mo<=100000)
-                    JOptionPane.showMessageDialog(null, "Minimum Balance Amount must be Rp1.500.000,00"+
+                    JOptionPane.showMessageDialog(null, "Minimum Balance Amount must be Rp100.000,00"+
                             "Do deposit soon to avoid account closure","CAUTION",2);
             }
     }//GEN-LAST:event_bokActionPerformed

@@ -12,15 +12,15 @@ import javax.swing.JOptionPane;
  * @author Faychan
  */
 public class transfer extends javax.swing.JFrame {
-    int mo = new balance().mo; String in,un;
+    public int mo = new balance().mo; 
+    String in,un;
     /**
      * Creates new form transfer
      */
     public transfer() {
         initComponents();
-        int mo;
-        this.in = "";
-        this.un = "";
+        in = "";
+        un = "";
     }
 
     /**
@@ -222,7 +222,7 @@ public class transfer extends javax.swing.JFrame {
     }//GEN-LAST:event_tf2ActionPerformed
 
     private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
-       if(in.length() < 12 ){
+       if(in.length() < 8 ){
             in += "1";
             tf1.setText(in);
         } else {
@@ -234,7 +234,7 @@ public class transfer extends javax.swing.JFrame {
 
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
         
-        if(in.length() < 12 ){
+        if(in.length() < 8 ){
             in += "2";
             tf1.setText(in);
         } else {
@@ -244,7 +244,7 @@ public class transfer extends javax.swing.JFrame {
     }//GEN-LAST:event_b3ActionPerformed
 
     private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
-        if(in.length() < 12 ){
+        if(in.length() < 8 ){
             in += "3";
             tf1.setText(in);
         } else {
@@ -254,7 +254,7 @@ public class transfer extends javax.swing.JFrame {
     }//GEN-LAST:event_b4ActionPerformed
 
     private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
-       if(in.length() < 12 ){
+       if(in.length() < 8 ){
             in += "6";
             tf1.setText(in);
         } else {
@@ -264,7 +264,7 @@ public class transfer extends javax.swing.JFrame {
     }//GEN-LAST:event_b7ActionPerformed
 
     private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
-        if(in.length() < 12 ){
+        if(in.length() < 8 ){
             in += "5";
             tf1.setText(in);
         } else {
@@ -274,7 +274,7 @@ public class transfer extends javax.swing.JFrame {
     }//GEN-LAST:event_b8ActionPerformed
 
     private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
-        if(in.length() < 12 ){
+        if(in.length() < 8 ){
             in += "4";
             tf1.setText(in);
         } else {
@@ -284,7 +284,7 @@ public class transfer extends javax.swing.JFrame {
     }//GEN-LAST:event_b9ActionPerformed
 
     private void b10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b10ActionPerformed
-        if(in.length() < 12 ){
+        if(in.length() < 8 ){
             in += "7"; 
             tf1.setText(in);
         } else {
@@ -294,7 +294,7 @@ public class transfer extends javax.swing.JFrame {
     }//GEN-LAST:event_b10ActionPerformed
 
     private void b11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b11ActionPerformed
-        if(in.length() < 12 ){
+        if(in.length() < 8 ){
             in += "8";
             tf1.setText(in);
         } else {
@@ -304,7 +304,7 @@ public class transfer extends javax.swing.JFrame {
     }//GEN-LAST:event_b11ActionPerformed
 
     private void b12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b12ActionPerformed
-        if(in.length() < 12 ){
+        if(in.length() < 8 ){
             in += "9";
             tf1.setText(in);
         } else {
@@ -314,26 +314,25 @@ public class transfer extends javax.swing.JFrame {
     }//GEN-LAST:event_b12ActionPerformed
 
     private void bokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bokActionPerformed
-        int t;
-        t = Integer.parseInt(tf1.getText());
+        int t; String r;
+        r = tf1.getText();
+        t = Integer.parseInt(tf2.getText());
         
         if(t>mo)
                 JOptionPane.showMessageDialog(null, 
                     "Balance amount is not enough\n"
                             + "please deposit",
                     "Transaction Failed",0);
-        else if(t<100000)
-                JOptionPane.showMessageDialog(null, 
-                    "Minimum Widrawal is Rp100.000",
-                    "Transaction Failed",0);
         else {
                 mo = mo-t; 
                 new balance().mo = this.mo;
-                JOptionPane.showMessageDialog(null, "Balance Amount: Rp."+mo);
+                JOptionPane.showMessageDialog(null, "Transferred to "+r+" with the amount of "+t+"\nBalance Amount Remaining: Rp."+mo);
                 if(mo<=100000)
-                    JOptionPane.showMessageDialog(null, "Minimum Balance Amount must be Rp1.500.000,00"+
+                    JOptionPane.showMessageDialog(null, "Minimum Balance Amount must be Rp100.000,00"+
                             "Do deposit soon to avoid account closure","CAUTION",2);
             }
+        
+        
 //        int t = Integer.parseInt(tf2.getText());
 //        int r = Integer.parseInt(tf1.getText());
 //
@@ -346,7 +345,7 @@ public class transfer extends javax.swing.JFrame {
 //            else {
 //                this.mo -= t;
 //                new balance().mo = this.mo;
-//                JOptionPane.showMessageDialog(null, "Transferred to "+r+" with the amount of "+t+"\nBalance Amount Remaining: Rp."+mo);
+//                
 //            }
 //        } else {
 //               JOptionPane.showMessageDialog(null, "Transferred to with the amount of "+t+"\nBalance Amount Remaining: Rp."+mo);
@@ -355,7 +354,7 @@ public class transfer extends javax.swing.JFrame {
 
     private void b0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b0ActionPerformed
        
-        if(in.length() < 12 ){
+        if(in.length() < 8 ){
              in += "0";
             tf1.setText(in);
         } else {
@@ -409,7 +408,7 @@ public class transfer extends javax.swing.JFrame {
                 new transfer().setVisible(true);
             }
         });
-    }
+}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton b0;
